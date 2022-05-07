@@ -5,7 +5,7 @@
     <link>https://mstislavromanovski.github.io/post/</link>
       <atom:link href="https://mstislavromanovski.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 07 May 2022 12:39:14 +0300</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 07 May 2022 13:46:18 +0300</lastBuildDate>
     <image>
       <url>https://mstislavromanovski.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Posts</title>
@@ -13,11 +13,530 @@
     </image>
     
     <item>
-      <title>My First Post</title>
-      <link>https://mstislavromanovski.github.io/post/prevweekpost/%D0%BF%D0%BE%D1%81%D1%82-%D0%BF%D0%BE-%D0%BF%D1%80%D0%BE%D1%88%D0%BB%D0%BE%D0%B8-%D0%BD%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5/</link>
-      <pubDate>Sat, 07 May 2022 12:39:14 +0300</pubDate>
-      <guid>https://mstislavromanovski.github.io/post/prevweekpost/%D0%BF%D0%BE%D1%81%D1%82-%D0%BF%D0%BE-%D0%BF%D1%80%D0%BE%D1%88%D0%BB%D0%BE%D0%B8-%D0%BD%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5/</guid>
-      <description></description>
+      <title>Контроль версий GIT</title>
+      <link>https://mstislavromanovski.github.io/post/gitvc/gitversionscontrol/</link>
+      <pubDate>Sat, 07 May 2022 13:46:18 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/post/gitvc/gitversionscontrol/</guid>
+      <description>&lt;h1 id=&#34;этапы-работы&#34;&gt;Этапы работы&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Создать базовую конфигурацию для работы с git.&lt;/li&gt;
+&lt;li&gt;Создать ключ SSH.&lt;/li&gt;
+&lt;li&gt;Создать ключ PGP.&lt;/li&gt;
+&lt;li&gt;Настроить подписи git.&lt;/li&gt;
+&lt;li&gt;Зарегистрироваться на Github.&lt;/li&gt;
+&lt;li&gt;Создать локальный каталог для выполнения заданий по предмету.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;выполнение&#34;&gt;Выполнение&lt;/h1&gt;
+&lt;p&gt;Создаем учётную запись на &lt;a href=&#34;https://github.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com&lt;/a&gt; и заполняем нужные данные(Скриншот 1).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_1.png&#34; alt=&#34;Screenshot_1&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;( Скриншот 1 )&lt;/p&gt;
+&lt;p&gt;Устанавливаем git-flow и gh на Fedora Linux(Скриншот 2-3), используя следующие команды.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd /tmp
+2 wget --no-check-certificate -q https://raw.github.com/petervanderdoes ⌋
+↪ /gitflow/develop/contrib/gitflow-installer.sh
+3 chmod +x gitflow-installer.sh
+4 sudo ./gitflow-installer.sh install stable
+sudo dnf install gh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_2.png&#34; alt=&#34;Screenshot_2&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Скриншот 2)&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_22.png&#34; alt=&#34;Screenshot_22&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Скриншот 3)&lt;/p&gt;
+&lt;p&gt;Производим базовую настроуку git, задаем имя и електронную почту владельца репозитория(Скриншот 4):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git config --global user.name &amp;#34;Name Surname&amp;#34;
+2 git config --global user.email &amp;#34;work@mail&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Настраиваем utf-8 в выводе сообщений git(Скриншот 4):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git config --global core.quotepath false
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_4.png&#34; alt=&#34;Screenshot_4&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Скриншот 4)
+Настраиваем верефикацию и подписание git, задаем имя начальной ветки, задаем параметр autocrlf и  safecrlf(Скриншот 5):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git config --global init.defaultBranch master
+git config --global core.autocrlf input
+git config --global core.safecrlf warn
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_3.png&#34; alt=&#34;Screenshot_3&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Скриншот 5)&lt;/p&gt;
+&lt;p&gt;Создаем ключи ssh по алгоритму rsa размером 4096, и по алгоритму ed25519(Скриншот 6-7):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ssh-keygen -t rsa -b 4096
+ssh-keygen -t ed25519
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_5.png&#34; alt=&#34;Screenshot_5&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Скриншот 6)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_6.png&#34; alt=&#34;Screenshot_6&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Скриншот 7)&lt;/p&gt;
+&lt;p&gt;Создаем ключ pgp(Скриншот 8):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --full-generate-key
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Из предложенных опций выбираем:&lt;/li&gt;
+&lt;li&gt;тип RSA and RSA;&lt;/li&gt;
+&lt;li&gt;размер 4096;&lt;/li&gt;
+&lt;li&gt;выберите срок действия; значение по умолчанию— 0 (срок действия не истекает
+никогда).&lt;/li&gt;
+&lt;li&gt;GPG запросит личную информацию, которая сохранится в ключе:&lt;/li&gt;
+&lt;li&gt;Имя (не менее 5 символов).&lt;/li&gt;
+&lt;li&gt;Адрес электронной почты.&lt;/li&gt;
+&lt;li&gt;При вводе email убедитесь, что он соответствует адресу, используемому на
+GitHub.&lt;/li&gt;
+&lt;li&gt;Комментарий. Можно ввести что угодно или нажать клавишу ввода, чтобы
+оставить это поле пустым.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_7.png&#34; alt=&#34;Screenshot_7&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Скриншот 8)&lt;/p&gt;
+&lt;p&gt;Далее копируем отпечаток привтаного ключа, он выводился на экран консоли, при генерации(Скриншот 9).&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_8.png&#34; alt=&#34;Screenshot_8&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Скриншот 9)&lt;/p&gt;
+&lt;p&gt;После этого, используем команду указанную ниже, чтобу получить ключ, и ввести его на &lt;a href=&#34;https://github.com/settings/keys&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/settings/keys&lt;/a&gt; (Скриншот 10):&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_9.png&#34; alt=&#34;Screenshot_9&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Скриншот 10)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --armor --export &amp;lt;Ваш отпечаток приватного ключа&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Настраиваем автоматические подписи git(Скриншот 11):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git config --global user.signingkey &amp;lt;PGP Fingerprint&amp;gt;
+2 git config --global commit.gpgsign true
+3 git config --global gpg.program $(which gpg2)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_10.png&#34; alt=&#34;Screenshot_10&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Скриншот 11)&lt;/p&gt;
+&lt;p&gt;Настройка gh(Скриншот 12):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gh auth login
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_11.png&#34; alt=&#34;Screenshot_11&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Скриншот 12)&lt;/p&gt;
+&lt;p&gt;Создаем репозиторий курса на основе шаблона(Скриншот 13-15):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkdir -p ~/work/study/2021-2022/&amp;#34;Операционные системы&amp;#34;
+2 cd ~/work/study/2021-2022/&amp;#34;Операционные системы&amp;#34;
+3 gh repo create study_2021-2022_os-intro
+↪ --template=yamadharma/course-directory-student-template --public
+4 git clone --recursive
+↪ https://github.com/MstislavRomanovski/study_2021-2022_os-intro.git
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_12.png&#34; alt=&#34;Screenshot_12&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Скриншот 13)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_13.png&#34; alt=&#34;Screenshot_13&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Скриншот 14)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_14.png&#34; alt=&#34;Screenshot_14&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Скриншот 15)&lt;/p&gt;
+&lt;p&gt;Настраиваем каталог курса, а имеено, переходим в каталог курса, удаляем лишние файлы(у меня не удалились), созадем необходимые каталоги(пришлось получить рут права для этого), и отправляем файлы на сервер(Скриншоты 16-20):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd ~/work/study/2021-2022/&amp;#34;Operating Systems&amp;#34;/study_2021-2022_os-intro
+rm package.json
+make COURSE=os-intro
+git add .
+git commit -am &amp;#39;feat(main): make course structure&amp;#39;
+git push
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_16.png&#34; alt=&#34;Screenshot_16&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_18.png&#34; alt=&#34;Screenshot_18&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_19.png&#34; alt=&#34;Screenshot_19&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_20.png&#34; alt=&#34;Screenshot_20&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_21.png&#34; alt=&#34;Screenshot_21&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Скриншоты 16 - 20)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Предыдущая неделя</title>
+      <link>https://mstislavromanovski.github.io/post/prevweek2/prevweek/</link>
+      <pubDate>Sat, 07 May 2022 13:22:28 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/post/prevweek2/prevweek/</guid>
+      <description>&lt;h1 id=&#34;что-было-сделано&#34;&gt;Что было сделано?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Операционные системы: выполнены лабораторные работы номер 3 и 4, а аткже первая часть проекта по созданию сайта на базе hugo.&lt;/li&gt;
+&lt;li&gt;Технология программирования: выполнены первые 2 лабораторные работы.&lt;/li&gt;
+&lt;li&gt;Более ничего масштабного не произошло&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
