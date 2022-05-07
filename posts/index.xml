@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | Academic</title>
+    <link>https://mstislavromanovski.github.io/posts/</link>
+      <atom:link href="https://mstislavromanovski.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 07 May 2022 12:39:14 +0300</lastBuildDate>
+    <image>
+      <url>https://mstislavromanovski.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Posts</title>
+      <link>https://mstislavromanovski.github.io/posts/</link>
+    </image>
+    
+    <item>
+      <title>My First Post</title>
+      <link>https://mstislavromanovski.github.io/posts/%D0%BF%D0%BE%D1%81%D1%82-%D0%BF%D0%BE-%D0%BF%D1%80%D0%BE%D1%88%D0%BB%D0%BE%D0%B8-%D0%BD%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5/</link>
+      <pubDate>Sat, 07 May 2022 12:39:14 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/posts/%D0%BF%D0%BE%D1%81%D1%82-%D0%BF%D0%BE-%D0%BF%D1%80%D0%BE%D1%88%D0%BB%D0%BE%D0%B8-%D0%BD%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
