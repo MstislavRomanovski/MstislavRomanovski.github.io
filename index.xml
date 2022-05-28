@@ -33,6 +33,119 @@
     </item>
     
     <item>
+      <title>Языки научного программирования</title>
+      <link>https://mstislavromanovski.github.io/post/sinceprogramming/sinceprogramming/</link>
+      <pubDate>Sat, 28 May 2022 13:56:38 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/post/sinceprogramming/sinceprogramming/</guid>
+      <description>&lt;p&gt;В компьютерном программировании научный язык программирования может относиться к двум степеням одной и той же концепции.&lt;/p&gt;
+&lt;p&gt;В широком смысле, научный язык программирования — это язык программирования , который широко используется в вычислительной науке и вычислительной математике . В этом смысле C/C++ и Python [1] можно считать научными языками программирования.&lt;/p&gt;
+&lt;p&gt;В более строгом смысле, научный язык программирования — это язык, разработанный и оптимизированный для использования математических формул и матриц . [2] Такие языки характеризуются не только наличием библиотек, выполняющих математические или научные функции, но и синтаксисом самого языка. [3] Например, ни в C++, ни в Python нет встроенных типов матриц или функций для матричной арифметики (сложение, умножение и т. д.); вместо этого эта функциональность доступна через стандартные библиотеки. Научные языки программирования в более строгом смысле включают ALGOL , APL , Fortran , J , Julia, Maple , MATLAB и R . [4] [5]&lt;/p&gt;
+&lt;p&gt;Научные языки программирования не следует путать с научным языком в целом, который в общих чертах относится к более высоким стандартам точности, правильности и краткости, ожидаемым от практиков научного метода .
+Ссылка на источник: &lt;a href=&#34;https://en.wikipedia.org/wiki/Scientific_programming_language&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/Scientific_programming_language&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Предыдущая неделя 4</title>
+      <link>https://mstislavromanovski.github.io/post/prevweek4/</link>
+      <pubDate>Sat, 28 May 2022 13:54:02 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/post/prevweek4/</guid>
+      <description>&lt;p&gt;Что было сделано?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Операционные системы: выполнены лабораторные работы номер 9 и 10, а также четвёртая часть проекта по созданию сайта на базе hugo.&lt;/li&gt;
+&lt;li&gt;Технология программирования: вижу свет в конце тунеля.&lt;/li&gt;
+&lt;li&gt;Моделирование: Выполнена 3я лабораторная работа.&lt;/li&gt;
+&lt;li&gt;Более ничего масштабного не произошло&amp;hellip;*&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Проект: Сайт не научного работника</title>
+      <link>https://mstislavromanovski.github.io/project/academcite/academcite/</link>
+      <pubDate>Sat, 28 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://mstislavromanovski.github.io/project/academcite/academcite/</guid>
+      <description>&lt;h1 id=&#34;этапы-реализации-проекта&#34;&gt;Этапы реализации проекта&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Размещение на Github pages заготовки для персонального сайта.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Установить необходимое программное обеспечение.&lt;/li&gt;
+&lt;li&gt;Скачать шаблон темы сайта.&lt;/li&gt;
+&lt;li&gt;Разместить его на хостинге git.&lt;/li&gt;
+&lt;li&gt;Установить параметр для URLs сайта.&lt;/li&gt;
+&lt;li&gt;Разместить заготовку сайта на Github pages.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Добавить к сайту данные о себе.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Список добавляемых данных.&lt;/li&gt;
+&lt;li&gt;Разместить фотографию владельца сайта.&lt;/li&gt;
+&lt;li&gt;Разместить краткое описание владельца сайта (Biography).&lt;/li&gt;
+&lt;li&gt;Добавить информацию об интересах (Interests).&lt;/li&gt;
+&lt;li&gt;Добавить информацию от образовании (Education).&lt;/li&gt;
+&lt;li&gt;Сделать пост по прошедшей неделе.&lt;/li&gt;
+&lt;li&gt;Добавить пост на тему по выбору:&lt;/li&gt;
+&lt;li&gt;Управление версиями. Git.&lt;/li&gt;
+&lt;li&gt;Непрерывная интеграция и непрерывное развертывание (CI/CD).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Добавить к сайту достижения.
+Список достижений.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Добавить информацию о навыках (Skills).&lt;/li&gt;
+&lt;li&gt;Добавить информацию об опыте (Experience).&lt;/li&gt;
+&lt;li&gt;Добавить информацию о достижениях (Accomplishments).&lt;/li&gt;
+&lt;li&gt;Сделать пост по прошедшей неделе.&lt;/li&gt;
+&lt;li&gt;Добавить пост на тему по выбору:&lt;/li&gt;
+&lt;li&gt;Легковесные языки разметки.&lt;/li&gt;
+&lt;li&gt;Языки разметки. LaTeX.&lt;/li&gt;
+&lt;li&gt;Язык разметки Markdown.&lt;/li&gt;
+&lt;li&gt;Добавить к сайту ссылки на научные и библиометрические ресурсы.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Зарегистрироваться на соответствующих ресурсах и разместить на них ссылки на сайте:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;eLibrary : &lt;a href=&#34;https://elibrary.ru/;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://elibrary.ru/;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Google Scholar : &lt;a href=&#34;https://scholar.google.com/;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://scholar.google.com/;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ORCID : &lt;a href=&#34;https://orcid.org/;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://orcid.org/;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mendeley : &lt;a href=&#34;https://www.mendeley.com/;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.mendeley.com/;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ResearchGate : &lt;a href=&#34;https://www.researchgate.net/;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.researchgate.net/;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Academia.edu : &lt;a href=&#34;https://www.academia.edu/;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.academia.edu/;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;arXiv : &lt;a href=&#34;https://arxiv.org/;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;github : &lt;a href=&#34;https://github.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/&lt;/a&gt;.
+Сделать пост по прошедшей неделе.
+Добавить пост на тему по выбору:&lt;/li&gt;
+&lt;li&gt;Оформление отчёта.&lt;/li&gt;
+&lt;li&gt;Создание презентаций.&lt;/li&gt;
+&lt;li&gt;Работа с библиографией.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Добавить с сайту все остальные элементы.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Сделать записи для персональных проектов.&lt;/li&gt;
+&lt;li&gt;Сделать пост по прошедшей неделе.&lt;/li&gt;
+&lt;li&gt;Добавить пост на тему по выбору.&lt;/li&gt;
+&lt;li&gt;Языки научного программирования.&lt;/li&gt;
+&lt;li&gt;Размещение двуязычного сайта на Github.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;Сделать поддержку английского и русского языков.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Разместить элементы сайта на обоих языках.&lt;/li&gt;
+&lt;li&gt;Разместить контент на обоих языках.&lt;/li&gt;
+&lt;li&gt;Сделать пост по прошедшей неделе.&lt;/li&gt;
+&lt;li&gt;Добавить пост на тему по выбору (на двух языках).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Postform</title>
       <link>https://mstislavromanovski.github.io/post/postform/</link>
       <pubDate>Sat, 21 May 2022 14:51:30 +0300</pubDate>

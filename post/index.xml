@@ -5,12 +5,40 @@
     <link>https://mstislavromanovski.github.io/post/</link>
       <atom:link href="https://mstislavromanovski.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 21 May 2022 14:51:30 +0300</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 28 May 2022 13:56:38 +0300</lastBuildDate>
     <image>
       <url>https://mstislavromanovski.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Posts</title>
       <link>https://mstislavromanovski.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Языки научного программирования</title>
+      <link>https://mstislavromanovski.github.io/post/sinceprogramming/sinceprogramming/</link>
+      <pubDate>Sat, 28 May 2022 13:56:38 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/post/sinceprogramming/sinceprogramming/</guid>
+      <description>&lt;p&gt;В компьютерном программировании научный язык программирования может относиться к двум степеням одной и той же концепции.&lt;/p&gt;
+&lt;p&gt;В широком смысле, научный язык программирования — это язык программирования , который широко используется в вычислительной науке и вычислительной математике . В этом смысле C/C++ и Python [1] можно считать научными языками программирования.&lt;/p&gt;
+&lt;p&gt;В более строгом смысле, научный язык программирования — это язык, разработанный и оптимизированный для использования математических формул и матриц . [2] Такие языки характеризуются не только наличием библиотек, выполняющих математические или научные функции, но и синтаксисом самого языка. [3] Например, ни в C++, ни в Python нет встроенных типов матриц или функций для матричной арифметики (сложение, умножение и т. д.); вместо этого эта функциональность доступна через стандартные библиотеки. Научные языки программирования в более строгом смысле включают ALGOL , APL , Fortran , J , Julia, Maple , MATLAB и R . [4] [5]&lt;/p&gt;
+&lt;p&gt;Научные языки программирования не следует путать с научным языком в целом, который в общих чертах относится к более высоким стандартам точности, правильности и краткости, ожидаемым от практиков научного метода .
+Ссылка на источник: &lt;a href=&#34;https://en.wikipedia.org/wiki/Scientific_programming_language&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/Scientific_programming_language&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Предыдущая неделя 4</title>
+      <link>https://mstislavromanovski.github.io/post/prevweek4/</link>
+      <pubDate>Sat, 28 May 2022 13:54:02 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/post/prevweek4/</guid>
+      <description>&lt;p&gt;Что было сделано?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Операционные системы: выполнены лабораторные работы номер 9 и 10, а также четвёртая часть проекта по созданию сайта на базе hugo.&lt;/li&gt;
+&lt;li&gt;Технология программирования: вижу свет в конце тунеля.&lt;/li&gt;
+&lt;li&gt;Моделирование: Выполнена 3я лабораторная работа.&lt;/li&gt;
+&lt;li&gt;Более ничего масштабного не произошло&amp;hellip;*&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Postform</title>
