@@ -1,79 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
+  <sitemap>
+    <loc>https://mstislavromanovski.github.io/en/sitemap.xml</loc>
+    
+      <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    
+  </sitemap>
   
-  <url>
-    <loc>https://mstislavromanovski.github.io/</loc><lastmod>2030-06-01T13:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/talk/example-talk/</loc><lastmod>2030-06-01T13:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/event/</loc><lastmod>2030-06-01T13:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/post/</loc><lastmod>2022-05-28T13:56:38+03:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/post/sinceprogramming/sinceprogramming/</loc><lastmod>2022-05-28T13:56:38+03:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc></loc><lastmod>2022-05-28T13:54:02+03:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc></loc><lastmod>2022-05-28T13:54:02+03:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/post/prevweek4/</loc><lastmod>2022-05-28T13:54:02+03:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/tag/other/</loc><lastmod>2022-05-28T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/project/</loc><lastmod>2022-05-28T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/tags/</loc><lastmod>2022-05-28T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/project/academcite/academcite/</loc><lastmod>2022-05-28T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/post/postform/</loc><lastmod>2022-05-21T14:51:30+03:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/post/prevweek3/</loc><lastmod>2022-05-21T14:34:30+03:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/post/markdown/markdown/</loc><lastmod>2022-05-14T12:57:03+03:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/post/gitvc/gitversionscontrol/</loc><lastmod>2022-05-07T13:46:18+03:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/post/prevweek/prevweek/</loc><lastmod>2022-05-07T13:22:28+03:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/post/prevweek2/prevweek2/</loc><lastmod>2022-05-07T13:22:28+03:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/tag/academic/</loc><lastmod>2020-12-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/categories/</loc><lastmod>2020-12-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/category/demo/</loc><lastmod>2020-12-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/post/getting-started/</loc><lastmod>2020-12-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc></loc><lastmod>2020-12-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc></loc><lastmod>2020-12-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/tag/%E5%BC%80%E6%BA%90/</loc><lastmod>2020-12-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/category/%E6%95%99%E7%A8%8B/</loc><lastmod>2020-12-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/slides/</loc><lastmod>2019-02-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/slides/example/</loc><lastmod>2019-02-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/privacy/</loc><lastmod>2018-06-28T00:00:00+01:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/terms/</loc><lastmod>2018-06-28T00:00:00+01:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/tag/deep-learning/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/project/example/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/publication-type/1/</loc><lastmod>2013-07-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/publication/example/</loc><lastmod>2013-07-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/publication_types/</loc><lastmod>2013-07-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mstislavromanovski.github.io/publication/</loc><lastmod>2013-07-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc></loc><lastmod>2013-07-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url></urlset>
+  <sitemap>
+    <loc>https://mstislavromanovski.github.io/ru/sitemap.xml</loc>
+    
+      <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+</sitemapindex>

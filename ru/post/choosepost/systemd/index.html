@@ -1,0 +1,1661 @@
+<!DOCTYPE html><html lang="ru-ru" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Мальков Роман Сергеевич" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Systemd Systemd &mdash; это набор основных строительных блоков для системы Linux. Он предоставляет диспетчер системы и служб, который работает как PID 1 и запускает остальную часть системы. Systemd предоставляет: * Агрессивные возможности распараллеливания" />
+
+  
+    <link rel="alternate" hreflang="en" href="https://mstislavromanovski.github.io/en/post/choosepost/systemd/" />
+  
+  <link rel="alternate" hreflang="ru-ru" href="https://mstislavromanovski.github.io/ru/post/choosepost/systemd/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.1052fab8b7700a3dc49ee23683097d66.css" />
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/ru/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://mstislavromanovski.github.io/ru/post/choosepost/systemd/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+    <meta property="twitter:site" content="@wowchemy" />
+    <meta property="twitter:creator" content="@wowchemy" />
+  
+  <meta property="og:site_name" content="Академик" />
+  <meta property="og:url" content="https://mstislavromanovski.github.io/ru/post/choosepost/systemd/" />
+  <meta property="og:title" content="Systemd | Академик" />
+  <meta property="og:description" content="Systemd Systemd &mdash; это набор основных строительных блоков для системы Linux. Он предоставляет диспетчер системы и служб, который работает как PID 1 и запускает остальную часть системы. Systemd предоставляет: * Агрессивные возможности распараллеливания" /><meta property="og:image" content="https://mstislavromanovski.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://mstislavromanovski.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="ru-ru" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2022-06-04T14:02:06&#43;03:00"
+      />
+    
+    <meta property="article:modified_time" content="2022-06-04T14:02:06&#43;03:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mstislavromanovski.github.io/ru/post/choosepost/systemd/"
+  },
+  "headline": "Systemd",
+  
+  "datePublished": "2022-06-04T14:02:06+03:00",
+  "dateModified": "2022-06-04T14:02:06+03:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Мальков Роман Сергеевич"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Академик",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mstislavromanovski.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Systemd Systemd \u0026mdash; это набор основных строительных блоков для системы Linux. Он предоставляет диспетчер системы и служб, который работает как PID 1 и запускает остальную часть системы. Systemd предоставляет: * Агрессивные возможности распараллеливания"
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Systemd | Академик</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="90d4ee34d6347e13183b1b438b958ec4" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.2ed908358299dd7ab553faae685c746c.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Поиск</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Поиск ..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Поиск ...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/ru/">Академик</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Переключить навигацию">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/ru/">Академик</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/ru/#about"><span>Домашняя страница</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/ru/#posts"><span>Посты</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/ru/#projects"><span>Проекты</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/ru/#talks"><span>Речи</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/ru/#featured"><span>Публикации</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/ru/"><span></span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/ru/#contact"><span>Контакты</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Поиск"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="Languages">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>Русский</span>
+            </div>
+            
+            <a class="dropdown-item" href="https://mstislavromanovski.github.io/en/post/choosepost/systemd/">
+              <span>English</span>
+            </a>
+            
+          </div>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Systemd</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    июн. 4, 2022
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 мин. для прочтения
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="systemd">Systemd</h1>
+<p>Systemd &mdash; это набор основных строительных блоков для системы Linux. Он
+предоставляет диспетчер системы и служб, который работает как PID 1 и
+запускает остальную часть системы. Systemd предоставляет: * Агрессивные
+возможности распараллеливания</p>
+<ul>
+<li>
+<p>Использует активацию сокета и D-Bus для запуска служб.</p>
+</li>
+<li>
+<p>Предлагает запуск демонов по запросу, отслеживает процессы с помощью
+контрольных групп Linux.</p>
+</li>
+<li>
+<p>Поддерживает моментальные снимки и восстановление состояния системы</p>
+</li>
+<li>
+<p>Поддерживает точки монтирования и автомонтирования</p>
+</li>
+<li>
+<p>Реализует сложную логику управления службами на основе
+транзакционных зависимостей.</p>
+</li>
+</ul>
+<p>Systemd предоставляет систему зависимостей между различными
+сущностями,называемыми «юнитами»(модулями/задачами), которыми systemd
+может управлять. Модули инкапсулируют различные объекты, необходимые для
+загрузки и обслуживания системы. Большинство юнитов настраиваются в
+конфигурационных файлах юнитов, синтаксис и базовый набор параметров
+которых описан в systemd.unit(5) , однако некоторые создаются
+автоматически из других конфигурационных файлов, динамически из
+состояния системы или программно во время выполнения. Устройства могут
+быть «активными» (что означает запущенные, связанные, подключенные, &hellip;,
+в зависимости от типа устройства, см.ниже) или «неактивными» (что
+означает остановленные, несвязанные, отключенные, &hellip;), а также в
+процессе активации или деактивации, т.е. между двумя состояниями (эти
+состояния называются «активация», «деактивация»). Также доступно
+специальное состояние «сбой», которое очень похоже на «неактивное» и
+вводится, когда служба каким-либо образом не удалась (процесс вернул код
+ошибки при выходе или произошел сбой, время ожидания операции истекло
+или после слишком большого количества перезапусков). ). Если это
+состояние введено, причина будет зарегистрирована для дальнейшего
+использования. Доступны следующие типы юнитов:</p>
+<ul>
+<li>
+<p>service - Служба в системе, включая инструкции по запуску,
+перезапуску и остановке службы.</p>
+</li>
+<li>
+<p>socket - Сетевой сокет, связанный со службой.</p>
+</li>
+<li>
+<p>device - Устройство, специально управляемое с помощью systemd.</p>
+</li>
+<li>
+<p>mount - Точка монтирования, управляемая с помощью systemd.</p>
+</li>
+<li>
+<p>automount - Точка монтирования автоматически монтируется при
+загрузке.</p>
+</li>
+<li>
+<p>swap - Поменять местами в системе.</p>
+</li>
+<li>
+<p>target - Точка синхронизации для других юнитов. Обычно используется
+для запуска включенных служб при загрузке.</p>
+</li>
+<li>
+<p>path - Путь для активации на основе пути. Например, вы можете
+запускать службы на основе состояния определенного пути, например,
+существует он или нет.</p>
+</li>
+<li>
+<p>timer - Таймер для планирования активации другого устройства.</p>
+</li>
+<li>
+<p>snapshot - &ldquo;Снимок&rdquo;(snapshot) текущего состояния systemd. Обычно
+используется для отката после внесения временных изменений в systemd</p>
+</li>
+<li>
+<p>slice - Ограничение ресурсов через узлы Linux Control Group
+(cgroups).</p>
+</li>
+<li>
+<p>scope - Информация с интерфейсов шины systemd. Обычно используется
+для управления внешними системными процессами.</p>
+</li>
+<li>
+<p>А вот расположение файлов модулей systemd ( Скриншот 1 )</p>
+</li>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/Screenshots/Screenshot_1.png" alt="Screenshot_1" loading="lazy" data-zoomable /></div>
+  </div></figure>
+ ( Скриншот 1 )</p>
+<h1 id="немного-о-структуре-юнитов">Немного о структуре Юнитов</h1>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/Screenshots/Screenshot_2.png" alt="Screenshot_2" loading="lazy" data-zoomable /></div>
+  </div></figure>
+ ( Скриншот 2 )</p>
+<p>На скриншоте 1 мы можем наблюдать некоторую структуру файла унита nginx:</p>
+<ol>
+<li>[Unit] &mdash; Обычно здесь описаны метаданные службы и её
+взаимодействие с другими службами.</li>
+</ol>
+<ul>
+<li>
+<p>Description &mdash; краткое описание демона</p>
+</li>
+<li>
+<p>Documentation &mdash; страница man, где описана работа со службой, в
+данном случае Nginx</p>
+</li>
+<li>
+<p>After &mdash; Дословно означает «После». Поле указывает, после каких
+демонов или событий данный юнит будет запущен. На нашем примере,
+юнит Nginx будет запущен после того, как поднимутся сетевые
+интерфейсы.</p>
+</li>
+</ul>
+<ol start="2">
+<li>[Service] &mdash; Описывает конфигурацию. Применяется только для
+юнитов служб.</li>
+</ol>
+<p>Type &mdash; Важный параметр. Описывает, каким образом демон будет запущен.
+В нашем варианте это forking, но вы можете столкнуться и с другими:</p>
+<ul>
+<li>
+<p>forking &mdash; после запуска демон ответвляется (fork), завершая
+родительский процесс;</p>
+</li>
+<li>
+<p>simple &mdash; при запуске, демон переходит в режим ожидания, в своем
+первоначальном виде;</p>
+</li>
+<li>
+<p>one-shot &mdash; одноразовое выполнение. Данный тип используется для
+скриптов, которые должны запуститься, и завершиться после
+выполнения.</p>
+</li>
+<li>
+<p>PIDFile &mdash; указывает на основной процесс, который отслеживает
+systemd</p>
+</li>
+<li>
+<p>ExecStartPre &mdash; основной путь и аргументы, с которыми будет
+запущена команда ДО запуска основного процесса</p>
+</li>
+<li>
+<p>ExecStart &mdash; основной путь и аргументы, с которым будет запущен
+Nginx</p>
+</li>
+<li>
+<p>ExecReload &mdash; указывает команду для перезапуска службы</p>
+</li>
+<li>
+<p>ExecStop &mdash; команда для остановки службы</p>
+</li>
+<li>
+<p>TimeoutStopSec &mdash; Указывает, что система будет ждать 5 секунд
+остановки службы, прежде чем остановить её принудительно</p>
+</li>
+</ul>
+<ol start="3">
+<li>[Install] &mdash; описывает поведение юнита.</li>
+</ol>
+<ul>
+<li>WantedBy &mdash; описывает как именно устройство будет включено.
+multi-user.target означает, что при запуске, в каталоге
+/etc/systemd/system будет создан каталог multi-user.target.wants, в
+котором будет создана символическая ссылка на службу. Это параметр
+зависимости с текущим блоком, когда вы остановите службу, эта ссылка
+будет удалена.</li>
+</ul>
+<h1 id="systemctl">Systemctl</h1>
+<p>Вы можете выполнять различные задачи управления для управления службами
+systemd с помощью команды <code>systemctl</code>. Ниже приведен набор примеров
+команд, демонстрирующих, как использовать systemctl для управления
+службами systemd ( Скриншоты 3 - 4 ).</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/Screenshots/Screenshot_3.png" alt="Screenshot_3" loading="lazy" data-zoomable /></div>
+  </div></figure>
+ ( Скриншот 3 )</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/Screenshots/Screenshot_4.png" alt="Screenshot_4" loading="lazy" data-zoomable /></div>
+  </div></figure>
+ ( Скриншот 4 )</p>
+<p>С полным списком параметров для команды <code>systemctl</code> можно ознакомитсья
+воспользовавшись командой <code>man systemctl</code>.</p>
+<h1 id="другие-команды-systemd-из-системы-ctl">Другие команды systemd из системы *ctl</h1>
+<p>Наряду с основным инструментом systemctl для управления целевыми и
+сервисными юнитами systemd предоставляет кучу других полезных утилит:</p>
+<ol>
+<li>Команда <code>timedatecl</code> . Эта команда предоставляет удобный интерфейс
+для изменения информации о дате и часовом поясе для системы.</li>
+<li>Команда <code>hostnamectl</code>. Эта команда позволяет нам постоянно изменять
+имя хоста системы без необходимости редактировать какие-либо файлы.</li>
+<li>Команда <code>localectl</code>. Позволяет менять системный настройки локали.</li>
+<li>Команда <code>loginctl</code> . <code>loginctl</code> можно использовать для интроспекции
+и управления состоянием systemd login manager
+systemd-logind.service.</li>
+<li>Команда <code>journalctl</code>.Используется для запроса содержимого журнала
+systemd (1).</li>
+</ol>
+<h1 id="источники">Источники</h1>
+<ol>
+<li><a href="https://freehost.com.ua/faq/articles/ispolzovanie-systemd/" target="_blank" rel="noopener">https://freehost.com.ua/faq/articles/ispolzovanie-systemd/</a></li>
+<li><a href="https://mirivlad.ru/vvedenie-v-systemd/" target="_blank" rel="noopener">https://mirivlad.ru/vvedenie-v-systemd/</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/systemctl.1.html" target="_blank" rel="noopener">https://man7.org/linux/man-pages/man1/systemctl.1.html</a></li>
+<li><a href="https://docs.fedoraproject.org/en-US/packaging-guidelines/Systemd/#definitions" target="_blank" rel="noopener">https://docs.fedoraproject.org/en-US/packaging-guidelines/Systemd/#definitions</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/systemd.1.html" target="_blank" rel="noopener">https://man7.org/linux/man-pages/man1/systemd.1.html</a></li>
+<li><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-managing_services_with_systemd" target="_blank" rel="noopener">https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-managing_services_with_systemd</a></li>
+<li><a href="https://docs.fedoraproject.org/en-US/quick-docs/understanding-and-administering-systemd/" target="_blank" rel="noopener">https://docs.fedoraproject.org/en-US/quick-docs/understanding-and-administering-systemd/</a></li>
+</ol>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://mstislavromanovski.github.io/ru/post/choosepost/systemd/&amp;text=Systemd" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://mstislavromanovski.github.io/ru/post/choosepost/systemd/&amp;t=Systemd" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Systemd&amp;body=https://mstislavromanovski.github.io/ru/post/choosepost/systemd/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://mstislavromanovski.github.io/ru/post/choosepost/systemd/&amp;title=Systemd" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Systemd%20https://mstislavromanovski.github.io/ru/post/choosepost/systemd/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://mstislavromanovski.github.io/ru/post/choosepost/systemd/&amp;title=Systemd" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://mstislavromanovski.github.io/"><img class="avatar mr-3 avatar-circle" src="/ru/authors/admin/avatar_hu19de7c43fbda4f1ee49d640b5b454229_130286_270x270_fill_lanczos_center_3.png" alt="Мальков Роман Сергеевич"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://mstislavromanovski.github.io/">Мальков Роман Сергеевич</a></h5>
+      <h6 class="card-subtitle">Студент</h6>
+      <p class="card-text">Студент университета РУДН.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/MstislavRomanovski" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://elibrary.ru/" target="_blank" rel="noopener">
+        <i class="fab fa-e"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://arxiv.org/" target="_blank" rel="noopener">
+        <i class="fas fa-arxiv"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://independent.academia.edu/RomanMalkov" target="_blank" rel="noopener">
+        <i class="ai ai-academia"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/my-orcid?orcid=0000-0003-1314-3353" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.mendeley.com/reference-manager/library/all-references" target="_blank" rel="noopener">
+        <i class="ai ai-mendeley"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.researchgate.net/profile/Roman-Malkov-2" target="_blank" rel="noopener">
+        <i class="ai ai-researchgate"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+  <p class="powered-by">
+    
+      <a href="/ru/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/ru/terms/">Terms</a>
+    
+  </p>
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2022 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.53d67dc2cb1ebceb89d5e2aba2f86112.js"></script>
+
+    
+    
+    
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+    
+    
+      <script src="/js/wowchemy-headroom.c251366b4128fd5e6b046d4c97a62a51.js" type="module"></script>
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/ru/js/wowchemy.min.2dc4ec27206b78f9d05ad86312c44710.js"></script>
+
+    
+    
+    
+    
+    
+    
+      
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Процитировать</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Копия
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Скачать
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+</body>
+</html>

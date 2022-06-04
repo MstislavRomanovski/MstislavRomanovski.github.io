@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | Academic</title>
+    <link>https://mstislavromanovski.github.io/en/post/</link>
+      <atom:link href="https://mstislavromanovski.github.io/en/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 04 Jun 2022 14:02:06 +0300</lastBuildDate>
+    <image>
+      <url>https://mstislavromanovski.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Posts</title>
+      <link>https://mstislavromanovski.github.io/en/post/</link>
+    </image>
+    
+    <item>
+      <title>Systemd</title>
+      <link>https://mstislavromanovski.github.io/en/post/choosepost/systemd/</link>
+      <pubDate>Sat, 04 Jun 2022 14:02:06 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/en/post/choosepost/systemd/</guid>
+      <description>&lt;h1 id=&#34;systemd&#34;&gt;systemd&lt;/h1&gt;
+&lt;p&gt;Systemd is a set of basic building blocks for a Linux system. He
+provides a system and service manager that runs as PID 1 and
+starts the rest of the system. Systemd provides: * Aggressive
+parallelization possibilities&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Uses socket activation and D-Bus to start services.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Offers to start daemons on demand, monitors processes with
+Linux control groups.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Supports snapshots and system state restore&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Supports mount points and automounts&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Implements complex service management logic based on
+transactional dependencies.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;systemd provides a system of dependencies between various
+entities called &amp;ldquo;units&amp;rdquo; (modules/tasks) that systemd
+can manage. Modules encapsulate various objects needed for
+system loading and maintenance. Most units are configured in
+unit configuration files, syntax and basic set of parameters
+which are described in systemd.unit(5) , however some are created
+automatically from other configuration files, dynamically from
+system state or programmatically at run time. Devices can
+be &amp;ldquo;active&amp;rdquo; (meaning running, connected, connected, &amp;hellip;,
+depending on the type of device, see below) or “inactive” (which
+means stopped, unlinked, disconnected, &amp;hellip;) and also in
+the process of activation or deactivation, i.e. between two states (these
+states are called &amp;ldquo;activation&amp;rdquo;, &amp;ldquo;deactivation&amp;rdquo;). Also available
+a special &amp;ldquo;failed&amp;rdquo; state, which is very similar to &amp;ldquo;inactive&amp;rdquo; and
+is entered when the service somehow failed (the process returned a code
+exit errors or failed, operation timed out
+or after too many restarts). ). If this
+state entered, the reason will be logged for further
+use. The following types of units are available:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;service - Service in the system, including start instructions,
+restart and stop the service.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;socket - The network socket associated with the service.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;device - A device specifically managed by systemd.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mount - Mount point managed by systemd.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;automount - The mount point is automatically mounted when
+loading.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;swap - Swap in the system.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;target - Synchronization point for other units. Commonly used
+to start enabled services on boot.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;path - Path to activate based on path. For example, you can
+start services based on the state of a particular path, e.g.
+whether it exists or not.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;timer - Timer for scheduling the activation of another device.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;snapshot - A &amp;ldquo;snapshot&amp;rdquo; of the current state of systemd. Usually
+used to rollback after making temporary changes to systemd&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;slice - Resource limitation via Linux Control Group nodes
+(cgroups).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;scope - Information from systemd bus interfaces. Commonly used
+to manage external system processes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;And here is the location of systemd modules files (Screenshot 1)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/Screenshots/Screenshot_1.png&#34; alt=&#34;Screenshot_1&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+ ( Screenshot 1 )&lt;/p&gt;
+&lt;h1 id=&#34;a-little-about-the-structure-of-units&#34;&gt;A little about the structure of Units&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/Screenshots/Screenshot_2.png&#34; alt=&#34;Screenshot_2&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+ ( Screenshot 2 )&lt;/p&gt;
+&lt;p&gt;In screenshot 1, we can observe some structure of the nginx unit file:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;[Unit] &amp;mdash; This usually describes the metadata of the service and its
+interaction with other services.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Description &amp;mdash; a brief description of the daemon&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Documentation &amp;mdash; man page, which describes how to work with the service, in
+In this case, Nginx&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;After &amp;mdash; Literally means &amp;ldquo;After&amp;rdquo;. The field indicates after which
+daemons or events, this unit will be started. In our example,
+the Nginx unit will be started after the network
+interfaces.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;[Service] &amp;mdash; Describes the configuration. Applies only to
+service units.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Type &amp;mdash; An important parameter. Describes how the daemon will be started.
+In our version, this is forking, but you may encounter others:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;forking &amp;mdash; after starting, the daemon forks (fork), completing
+parent process;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;simple &amp;mdash; at startup, the daemon goes into standby mode, in its
+original form;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;one-shot &amp;mdash; one-time execution. This type is used for
+scripts that should run and finish after
+execution.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PIDFile &amp;mdash; points to the main process that monitors
+systemd&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ExecStartPre &amp;mdash; main path and arguments to be
+command started BEFORE starting the main process&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ExecStart &amp;mdash; main path and arguments to be launched with
+Nginx&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ExecReload &amp;mdash; specifies the command to restart the service&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ExecStop &amp;mdash; command to stop the service&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TimeoutStopSec &amp;mdash; Indicates that the system will wait 5 seconds
+stopping a service before forcibly stopping it&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;[Install] &amp;mdash; describes the behavior of the unit.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;WantedBy &amp;mdash; describes exactly how the device will be turned on.
+multi-user.target means that on startup, in a directory
+/etc/systemd/system directory multi-user.target.wants will be created, in
+which will create a symbolic link to the service. This is the parameter
+dependencies with the current block, when you stop the service this link
+will be deleted.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;systemctl&#34;&gt;systemctl&lt;/h1&gt;
+&lt;p&gt;You can perform various management tasks to manage services
+systemd using the &lt;code&gt;systemctl&lt;/code&gt; command. Below is a set of examples
+commands demonstrating how to use systemctl to control
+systemd services ( Screenshots 3 - 4 ).&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/Screenshots/Screenshot_3.png&#34; alt=&#34;Screenshot_3&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+ ( Screenshot 3 )&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/Screenshots/Screenshot_4.png&#34; alt=&#34;Screenshot_4&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+ ( Screenshot 4 )&lt;/p&gt;
+&lt;p&gt;For a complete list of options for the &lt;code&gt;systemctl&lt;/code&gt; command, see
+using the &lt;code&gt;man systemctl&lt;/code&gt; command.&lt;/p&gt;
+&lt;h1 id=&#34;other-systemd-commands-from-the-system-ctl&#34;&gt;Other systemd commands from the system *ctl&lt;/h1&gt;
+&lt;p&gt;Along with the main systemctl tool for managing target and
+service units systemd provides a bunch of other useful utilities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The &lt;code&gt;timedatecl&lt;/code&gt; command. This command provides a user-friendly interface
+to change the date and time zone information for the system.&lt;/li&gt;
+&lt;li&gt;Command &lt;code&gt;hostnamectl&lt;/code&gt;. This command allows us to permanently change
+hostname of the system without having to edit any files.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;localectl&lt;/code&gt; command. Allows you to change the system locale settings.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;loginctl&lt;/code&gt; command. &lt;code&gt;loginctl&lt;/code&gt; can be used for introspection
+and state management systemd login manager
+systemd-logind.service.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;journalctl&lt;/code&gt; command. Used to query the contents of the journal
+systemd(1).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;sources&#34;&gt;Sources&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://freehost.com.ua/faq/articles/ispolzovanie-systemd/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://freehost.com.ua/faq/articles/ispolzovanie-systemd/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mirivlad.ru/vvedenie-v-systemd/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mirivlad.ru/vvedenie-v-systemd/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://man7.org/linux/man-pages/man1/systemctl.1.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://man7.org/linux/man-pages/man1/systemctl.1.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.fedoraproject.org/en-US/packaging-guidelines/Systemd/#definitions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://docs.fedoraproject.org/en-US/packaging-guidelines/Systemd/#definitions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://man7.org/linux/man-pages/man1/systemd.1.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://man7.org/linux/man-pages/man1/systemd.1.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-managing_services_with_systemd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-managing_services_with_systemd&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.fedoraproject.org/en-US/quick-docs/understanding-and-administering-systemd/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://docs.fedoraproject.org/en-US/quick-docs/understanding-and-administering-systemd/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Scientific Programming Languages</title>
+      <link>https://mstislavromanovski.github.io/en/post/sinceprogramming/sinceprogramming/</link>
+      <pubDate>Sat, 28 May 2022 13:56:38 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/en/post/sinceprogramming/sinceprogramming/</guid>
+      <description>&lt;p&gt;In computer programming, a scientific programming language can refer to two degrees of the same concept.&lt;/p&gt;
+&lt;p&gt;Broadly speaking, a scientific programming language is a programming language that is widely used in computational science and computational mathematics. In this sense, C/C++ and Python [1] can be considered scientific programming languages.&lt;/p&gt;
+&lt;p&gt;In a stricter sense, a scientific programming language is a language designed and optimized for the use of mathematical formulas and matrices. [2] Such languages ​​are characterized not only by the presence of libraries that perform mathematical or scientific functions, but also by the syntax of the language itself. [3] For example, neither C++ nor Python has built-in matrix types or functions for matrix arithmetic (addition, multiplication, etc.); instead, this functionality is available through the standard libraries. Scientific programming languages ​​in a stricter sense include ALGOL, APL, Fortran, J, Julia, Maple, MATLAB, and R. [4] [5]&lt;/p&gt;
+&lt;p&gt;Scientific programming languages ​​should not be confused with scientific language in general, which loosely refers to the higher standards of precision, correctness, and brevity expected of practitioners of the scientific method.
+Link to source: &lt;a href=&#34;https://en.wikipedia.org/wiki/Scientific_programming_language&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/Scientific_programming_language&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Previous Week 4</title>
+      <link>https://mstislavromanovski.github.io/en/post/prevweek4/</link>
+      <pubDate>Sat, 28 May 2022 13:54:02 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/en/post/prevweek4/</guid>
+      <description>&lt;p&gt;What was done?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Operating systems: completed labs 9 and 10, as well as the fourth part of the project to create a site based on hugo.&lt;/li&gt;
+&lt;li&gt;Programming technology: see the light at the end of the tunnel.&lt;/li&gt;
+&lt;li&gt;Modeling: Completed 3rd laboratory work.
+&lt;em&gt;Nothing bigger happened&amp;hellip;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Previous Week 5</title>
+      <link>https://mstislavromanovski.github.io/en/post/prevweek5/</link>
+      <pubDate>Sat, 28 May 2022 13:54:02 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/en/post/prevweek5/</guid>
+      <description>&lt;p&gt;What was done?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Operating systems: completed labs 11 and 12, as well as the fifth part of the project to create a site based on hugo.&lt;/li&gt;
+&lt;li&gt;Programming technology: Something went wrong, but it seems ok.&lt;/li&gt;
+&lt;li&gt;Modeling: Completed 4th laboratory work.
+&lt;em&gt;Nothing bigger happened&amp;hellip;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Postform</title>
+      <link>https://mstislavromanovski.github.io/en/post/postform/</link>
+      <pubDate>Sat, 21 May 2022 14:51:30 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/en/post/postform/</guid>
+      <description>&lt;h1 id=&#34;making-a-report-on-laboratory-work&#34;&gt;Making a report on laboratory work&lt;/h1&gt;
+&lt;p&gt;Laboratory work is a small research work that
+and should be completed in accordance with all approved requirements. When preparing a lab report, you will learn a number of important elements that will come in handy later.
+you when writing term papers and dissertations.&lt;/p&gt;
+&lt;h1 id=&#34;report-structure&#34;&gt;Report structure&lt;/h1&gt;
+&lt;p&gt;According to GOST 7.32-2001, any research work must be
+contain the following elements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;title page;&lt;/li&gt;
+&lt;li&gt;essay;
+– introduction;&lt;/li&gt;
+&lt;li&gt;the main part;&lt;/li&gt;
+&lt;li&gt;conclusion.
+GOST also recommends that the following elements be included in the work:&lt;/li&gt;
+&lt;li&gt;list of performers;&lt;/li&gt;
+&lt;li&gt;content;&lt;/li&gt;
+&lt;li&gt;Normative references;
+– definitions;
+– designations and abbreviations;
+– list of sources used;
+– applications.
+If you are carrying out complex work that is carried out in several stages, then you may
+you need to include part or all of the elements of the second list.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;the-content-of-the-main-elements-of-the-report&#34;&gt;The content of the main elements of the report&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Title page. The first sheet of work is drawn up strictly according to the model, which is usually
+provided in the teaching aids for your subject. It not only requires
+specify elements such as the name of the educational institution, type of work
+and information about the performer, but also arrange them in strict accordance with the standards.&lt;/li&gt;
+&lt;li&gt;Abstract. The abstract is actually a summary of your entire report.
+and contains some statistical information. It must specify the number of parts,
+pages of the work, illustrations, applications, tables, used literary
+sources and applications. Here is a list of key words
+and the actual text of the abstract. The latter includes the main elements of work
+from the set goals to the results and recommendations for their implementation. In practice
+institutions of higher education do not usually include abstracts in reports on laboratory work.
+– Introduction. In the introduction of a typical laboratory work, goals are usually prescribed
+ongoing research and tasks, the implementation of which will help achieve the goals. At the same time, there are works in which students become
+real pioneers. Have you ever experienced at least once
+feelings of extreme curiosity and impatience while doing lab work?
+Feel that in just a couple of minutes you will find the answer to the question to which
+no one has ever found an answer yet? It is for such studies that a detailed introduction is written with proof of the relevance and novelty of the topic under study. To
+really conduct research in an area in which, as they say, not yet
+the foot of a man has stepped, in the introduction you will need to give an assessment of the modern
+state of the problem under consideration and justify the need for its solution.&lt;/li&gt;
+&lt;li&gt;Main part. Since different universities and disciplines have their own
+subtleties of laboratory work, the content of the main part in detail
+described in the relevant manuals. It is important that in this section of the work
+its essence is reflected, the methodology and results of the work done are described.
+The main part contains the following elements:&lt;/li&gt;
+&lt;li&gt;the purpose of the study;
+– tasks, the implementation of which will help achieve the goals;&lt;/li&gt;
+&lt;li&gt;a workflow that describes the actions performed;&lt;/li&gt;
+&lt;li&gt;other sections provided for by the methodological materials on the studied
+discipline.&lt;/li&gt;
+&lt;li&gt;Conclusion. In this part of the work, you will need to draw conclusions based on the results obtained during the laboratory work. To do this, evaluate how fully implemented
+assigned tasks. In complex works, other elements may be present,
+for example, recommendations for further application of the results of the
+work.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Previous Week 3</title>
+      <link>https://mstislavromanovski.github.io/en/post/prevweek3/</link>
+      <pubDate>Sat, 21 May 2022 14:34:30 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/en/post/prevweek3/</guid>
+      <description>&lt;p&gt;What was done?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Operating systems: completed laboratory work number 7 and 8, as well as the third part of the project to create a site based on hugo.&lt;/li&gt;
+&lt;li&gt;Programming technology: still desperate.&lt;/li&gt;
+&lt;li&gt;Modeling: 1 lab submitted, 2nd completed, 3rd in progress.&lt;/li&gt;
+&lt;li&gt;Music: I did not invent anything - for mediocrity.&lt;/li&gt;
+&lt;li&gt;3d modeling: &amp;hellip; .
+&lt;em&gt;Nothing bigger happened&amp;hellip;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Markdown how not to become crazy</title>
+      <link>https://mstislavromanovski.github.io/en/post/markdown/markdown/</link>
+      <pubDate>Sat, 14 May 2022 12:57:03 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/en/post/markdown/markdown/</guid>
+      <description>&lt;h2 id=&#34;co-to-jest&#34;&gt;Co to jest?&lt;/h2&gt;
+&lt;p&gt;Markdown (pronounced markdown) is a lightweight markup language designed to indicate formatting in plain text while maintaining human readability as much as possible, and suitable for machine conversion into advanced publishing languages ​​(HTML, Rich Text, and others).
+To create a title, use the sign ( # ), for example:
+1 # This is heading 1
+2 ## This is heading 2
+3 ### This is heading 3
+4 #### This is heading 4
+To make text bold, enclose it in double asterisks:
+1 This text is &lt;strong&gt;bold&lt;/strong&gt;.
+To make text italic, enclose it in single asterisks:
+1 This text is &lt;em&gt;italic&lt;/em&gt;.
+To make text bold and italic, enclose it in triple
+asterisks:
+1 This is text is both &lt;em&gt;&lt;strong&gt;bold and italic&lt;/strong&gt;&lt;/em&gt;.
+Quote blocks are created using the &amp;gt; symbol:
+1 &amp;gt; The drought had lasted now for ten million years, and the reign of
+the terrible lizards had long since ended. Here on the Equator, in
+the continent which would one day be known as Africa, the battle
+for existence had reached a new climax of ferocity, and the victor
+was not yet in sight. In this barren and desiccated land, only the
+small or the swift or the fierce could flourish, or even hope to
+survive.
+↪
+↪
+↪
+↪
+↪
+↪
+An unordered (bulleted) list can be formatted with asterisks or dashes:
+1 - List item 1
+2 - List item 2
+3 - List item 3
+To nest one list within another, indent the elements of the child list:
+34 Lab 3. Markdown
+1 - List item 1
+2 - List item A
+3 - List item B
+4 - List item 2
+An ordered list can be formatted with the appropriate numbers:
+1 1. First instruction
+2 1. Second instruction
+3 1. Third instruction
+To nest one list within another, indent the elements of the child list:
+1 1. First instruction
+2 1. Sub instruction
+3 1. Sub-instruction
+4 1.Second instruction
+The Markdown syntax for an embedded link consists of a [link text] part representing the text of the hyperlink and a (file-name.md) part representing the URL or file name
+which is referenced:
+1 &lt;a href=&#34;filename.md&#34;&gt;link text&lt;/a&gt;
+Markdown supports both embedding code snippets in a sentence and
+placement between offers in the form of separate fenced blocks. Fenced
+code blocks are an easy way to highlight syntax for code snippets. General
+format of fenced code blocks:
+1 &lt;code&gt;languages 2 your code goes in here 3&lt;/code&gt;
+Superscripts and subscripts:
+𝐻2
+written as
+1H~2~O
+2
+ten
+written as
+1 2^10^
+Intratext formulas are made similar to LaTeX formulas. For example, the formula
+sin2
+(𝑥) + cos2
+(𝑥) = 1 will be written as
+1 $\sin^2 (x) + \cos^2 (x) = 1$
+Off formulas:
+sin2
+(𝑥) + cos2
+(𝑥) = 1
+{#eq:eq:sin2+cos2} with reference in text &amp;ldquo;See formula ([-@eq:eq:sin2+cos2]).&amp;rdquo; written as
+1 $$
+2 \sin^2 (x) + \cos^2 (x) = 1
+3 $$ {#eq:eq:sin2+cos2}
+four
+5 See formula ([-@eq:eq:sin2+cos2]).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Git version control</title>
+      <link>https://mstislavromanovski.github.io/en/post/gitvc/gitversionscontrol/</link>
+      <pubDate>Sat, 07 May 2022 13:46:18 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/en/post/gitvc/gitversionscontrol/</guid>
+      <description>&lt;h1 id=&#34;stages-of-work&#34;&gt;Stages of work&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a basic configuration for working with git.&lt;/li&gt;
+&lt;li&gt;Create an SSH key.&lt;/li&gt;
+&lt;li&gt;Create a PGP key.&lt;/li&gt;
+&lt;li&gt;Set up git signatures.&lt;/li&gt;
+&lt;li&gt;Sign up on Github.&lt;/li&gt;
+&lt;li&gt;Create a local directory for completing assignments on the subject.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;performance&#34;&gt;Performance&lt;/h1&gt;
+&lt;p&gt;Create an account on &lt;a href=&#34;https://github.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com&lt;/a&gt; and fill in the required data (Screenshot 1).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_1.png&#34; alt=&#34;Screenshot_1&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;( Screenshot 1 )&lt;/p&gt;
+&lt;p&gt;Install git-flow and gh on Fedora Linux (Screenshot 2-3) using the following commands.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd /tmp
+2 wget --no-check-certificate -q https://raw.github.com/petervanderdoes ⌋
+↪ /gitflow/develop/contrib/gitflow-installer.sh
+3 chmod +x gitflow-installer.sh
+4 sudo ./gitflow-installer.sh install stable
+sudo dnf install gh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_2.png&#34; alt=&#34;Screenshot_2&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Screenshot 2)&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_22.png&#34; alt=&#34;Screenshot_22&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Screenshot 3)&lt;/p&gt;
+&lt;p&gt;We make a basic git setup, set the name and email of the owner of the repository (Screenshot 4):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git config --global user.name &amp;#34;Name Surname&amp;#34;
+2 git config --global user.email &amp;#34;work@mail&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Set up utf-8 in git output (Screenshot 4):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git config --global core.quotepath false
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_4.png&#34; alt=&#34;Screenshot_4&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Screenshot 4)
+Set up git verification and signing, set the name of the initial branch, set the autocrlf and safecrlf parameters (Screenshot 5):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git config --global init.defaultBranch master
+git config --global core.autocrlf input
+git config --global core.safecrlf warn
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_3.png&#34; alt=&#34;Screenshot_3&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Screenshot 5)&lt;/p&gt;
+&lt;p&gt;We create ssh keys using the rsa algorithm with a size of 4096, and using the ed25519 algorithm (Screenshot 6-7):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ssh-keygen -t rsa -b 4096
+ssh-keygen -t ed25519
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_5.png&#34; alt=&#34;Screenshot_5&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Screenshot 6)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_6.png&#34; alt=&#34;Screenshot_6&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Screenshot 7)&lt;/p&gt;
+&lt;p&gt;Create a pgp key (Screenshot 8):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --full-generate-key
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;From the proposed options, choose:&lt;/li&gt;
+&lt;li&gt;type RSA and RSA;&lt;/li&gt;
+&lt;li&gt;size 4096;&lt;/li&gt;
+&lt;li&gt;select the expiration date; default value is 0 (does not expire
+never).&lt;/li&gt;
+&lt;li&gt;GPG will ask for personal information, which will be stored in the key:&lt;/li&gt;
+&lt;li&gt;Name (at least 5 characters).&lt;/li&gt;
+&lt;li&gt;E-mail address.&lt;/li&gt;
+&lt;li&gt;When entering an email, make sure it matches the address used on
+GitHub.&lt;/li&gt;
+&lt;li&gt;Comment. You can type anything or press the enter key to
+leave this field blank.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_7.png&#34; alt=&#34;Screenshot_7&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Screenshot 8)&lt;/p&gt;
+&lt;p&gt;Next, we copy the fingerprint of the private key, it was displayed on the console screen during generation (Screenshot 9).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_8.png&#34; alt=&#34;Screenshot_8&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Screenshot 9)&lt;/p&gt;
+&lt;p&gt;After that, use the command below to get the key and enter it on &lt;a href=&#34;https://github.com/settings/keys&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/settings/keys&lt;/a&gt; (Screenshot 10):&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_9.png&#34; alt=&#34;Screenshot_9&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Screenshot 10)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gpg --armor --export &amp;lt;your private key fingerprint&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Set up automatic git signatures (Screenshot 11):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git config --global user.signingkey &amp;lt;PGP Fingerprint&amp;gt;
+2 git config --global commit.gpgsign true
+3 git config --global gpg.program $(which gpg2)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_10.png&#34; alt=&#34;Screenshot_10&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Screenshot 11)&lt;/p&gt;
+&lt;p&gt;Setting gh (Screenshot 12):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gh auth login
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_11.png&#34; alt=&#34;Screenshot_11&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Screenshot 12)&lt;/p&gt;
+&lt;p&gt;Create a course repository based on the template (Screenshot 13-15):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkdir -p ~/work/study/2021-2022/&amp;#34;Operating Systems&amp;#34;
+2 cd ~/work/study/2021-2022/&amp;#34;Operating systems&amp;#34;
+3 gh repo create study_2021-2022_os-intro
+↪ --template=yamadharma/course-directory-student-template --public
+4 git clone --recursive
+↪ https://github.com/MstislavRomanovski/study_2021-2022_os-intro.git
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_12.png&#34; alt=&#34;Screenshot_12&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Screenshot 13)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_13.png&#34; alt=&#34;Screenshot_13&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Screenshot 14)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_14.png&#34; alt=&#34;Screenshot_14&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Screenshot 15)&lt;/p&gt;
+&lt;p&gt;We set up the course directory, and yes, go to the course directory, delete unnecessary files (I didn’t delete them), create the necessary directories (I had to get root rights for this), and send the files to the server (Screenshots 16-20):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd ~/work/study/2021-2022/&amp;#34;Operating Systems&amp;#34;/study_2021-2022_os-intro
+rm package.json
+make COURSE=os-intro
+git add .
+git commit -am &amp;#39;feat(main): make course structure&amp;#39;
+git push
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_16.png&#34; alt=&#34;Screenshot_16&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_18.png&#34; alt=&#34;Screenshot_18&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_19.png&#34; alt=&#34;Screenshot_19&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_20.png&#34; alt=&#34;Screenshot_20&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mstislavromanovski.github.io/gitcontrol/screens/Screenshot_21.png&#34; alt=&#34;Screenshot_21&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+(Screenshots 16 - 20)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Previous Week</title>
+      <link>https://mstislavromanovski.github.io/en/post/prevweek/prevweek/</link>
+      <pubDate>Sat, 07 May 2022 13:22:28 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/en/post/prevweek/prevweek/</guid>
+      <description>&lt;h1 id=&#34;what-was-done&#34;&gt;What was done?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Operating systems: completed labs 3 and 4, as well as the first part of the project to create a site based on hugo.&lt;/li&gt;
+&lt;li&gt;Programming technology: the first 2 laboratory works have been completed.
+*Nothing bigger happened&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Предыдущая неделя 2</title>
+      <link>https://mstislavromanovski.github.io/en/post/prevweek2/prevweek2/</link>
+      <pubDate>Sat, 07 May 2022 13:22:28 +0300</pubDate>
+      <guid>https://mstislavromanovski.github.io/en/post/prevweek2/prevweek2/</guid>
+      <description>&lt;p&gt;Что было сделано?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Операционные системы: выполнены лабораторные работы номер 5 и 6, а также вторая часть проекта по созданию сайта на базе hugo.&lt;/li&gt;
+&lt;li&gt;Технология программирования: в отчаянии.&lt;/li&gt;
+&lt;li&gt;Моделирование: 1 лабораторная работа готова.&lt;/li&gt;
+&lt;li&gt;Музыка: Придумал крутую мрачную последовательность пауэр аккордов.&lt;/li&gt;
+&lt;li&gt;3д моделирование: 3д модель так и не портирована на Source.&lt;/li&gt;
+&lt;li&gt;Более ничего масштабного не произошло&amp;hellip;*&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

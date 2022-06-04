@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Academic</title>
+    <link>https://mstislavromanovski.github.io/en/project/</link>
+      <atom:link href="https://mstislavromanovski.github.io/en/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 28 May 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://mstislavromanovski.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Projects</title>
+      <link>https://mstislavromanovski.github.io/en/project/</link>
+    </image>
+    
+    <item>
+      <title>Project: site of academic worker</title>
+      <link>https://mstislavromanovski.github.io/en/project/academcite/academcite/</link>
+      <pubDate>Sat, 28 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://mstislavromanovski.github.io/en/project/academcite/academcite/</guid>
+      <description>&lt;h1 id=&#34;stages-of-project-implementation&#34;&gt;Stages of project implementation&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Placement on Github pages of a blank for a personal site.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Install the necessary software.&lt;/li&gt;
+&lt;li&gt;Download website theme template.&lt;/li&gt;
+&lt;li&gt;Host it on git hosting.&lt;/li&gt;
+&lt;li&gt;Set parameter for site URLs.&lt;/li&gt;
+&lt;li&gt;Place the site blank on Github pages.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Add information about yourself to the site.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;List of added data.&lt;/li&gt;
+&lt;li&gt;Post a photo of the owner of the site.&lt;/li&gt;
+&lt;li&gt;Place a short description of the owner of the site (Biography).&lt;/li&gt;
+&lt;li&gt;Add information about interests (Interests).&lt;/li&gt;
+&lt;li&gt;Add information from education (Education).&lt;/li&gt;
+&lt;li&gt;Make a post for the past week.&lt;/li&gt;
+&lt;li&gt;Add a post on a topic of your choice:&lt;/li&gt;
+&lt;li&gt;Version management. Git.&lt;/li&gt;
+&lt;li&gt;Continuous Integration and Continuous Deployment (CI/CD).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Add achievements to the site.
+List of achievements.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Add information about skills (Skills).&lt;/li&gt;
+&lt;li&gt;Add information about the experience (Experience).&lt;/li&gt;
+&lt;li&gt;Add information about achievements (Accomplishments).&lt;/li&gt;
+&lt;li&gt;Make a post for the past week.&lt;/li&gt;
+&lt;li&gt;Add a post on a topic of your choice:&lt;/li&gt;
+&lt;li&gt;Lightweight markup languages.&lt;/li&gt;
+&lt;li&gt;Markup languages. LaTeX.&lt;/li&gt;
+&lt;li&gt;Markdown language.&lt;/li&gt;
+&lt;li&gt;Add links to scientific and bibliometric resources to the site.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Register on the relevant resources and place links to them on the site:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;eLibrary: &lt;a href=&#34;https://elibrary.ru/;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://elibrary.ru/;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Google Scholar: &lt;a href=&#34;https://scholar.google.com/;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://scholar.google.com/;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ORCID : &lt;a href=&#34;https://orcid.org/;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://orcid.org/;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mendeley : &lt;a href=&#34;https://www.mendeley.com/;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.mendeley.com/;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ResearchGate : &lt;a href=&#34;https://www.researchgate.net/;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.researchgate.net/;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Academia.edu : &lt;a href=&#34;https://www.academia.edu/;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.academia.edu/;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;arXiv : &lt;a href=&#34;https://arxiv.org/;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;github : &lt;a href=&#34;https://github.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/&lt;/a&gt;.
+Make a post last week.
+Add a post on a topic of your choice:&lt;/li&gt;
+&lt;li&gt;Making a report.&lt;/li&gt;
+&lt;li&gt;Creation of presentations.&lt;/li&gt;
+&lt;li&gt;Working with bibliography.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Add all other elements to the site.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Make notes for personal projects.&lt;/li&gt;
+&lt;li&gt;Make a post for the past week.&lt;/li&gt;
+&lt;li&gt;Add a post on a topic of your choice.&lt;/li&gt;
+&lt;li&gt;Scientific programming languages.&lt;/li&gt;
+&lt;li&gt;Hosting a bilingual site on Github.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;Make support for English and Russian languages.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Place site elements in both languages.&lt;/li&gt;
+&lt;li&gt;Post content in both languages.&lt;/li&gt;
+&lt;li&gt;Make a post for the past week.&lt;/li&gt;
+&lt;li&gt;Add a post on a topic of your choice (bilingual).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
